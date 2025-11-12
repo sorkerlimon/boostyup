@@ -1,0 +1,22 @@
+# Python basics
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Django specifics
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+static_root/
+local_settings.py
+.env
+.env.*
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
