@@ -14,48 +14,91 @@
     </div>
 
     <div class="grid w-full max-w-5xl gap-12 lg:grid-cols-[1fr,320px]">
-      <form class="space-y-8 rounded-[32px] border border-white/60 bg-white/90 p-10 shadow-2xl shadow-gray-900/10 backdrop-blur">
-        <div class="grid gap-2 sm:grid-cols-[160px,1fr,auto] sm:items-center">
-          <label for="email" class="text-sm font-semibold text-gray-700 sm:col-span-1">Email Address</label>
-          <input id="email" type="email" placeholder="you@example.com" class="sm:col-span-1 w-full rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm focus:border-orange-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-orange-500" />
-          <button type="button" class="mt-2 w-full rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:from-orange-600 hover:to-orange-700 sm:mt-0 sm:w-auto">
-            Send OTP
-          </button>
-        </div>
-        <p class="text-xs text-gray-500">
-          We'll send a one-time passcode to your email. Enter it below to verify your account ownership.
-        </p>
+      <form method="post" class="space-y-8 rounded-[32px] border border-white/60 bg-white/90 p-10 shadow-2xl shadow-gray-900/10 backdrop-blur">
+        {% csrf_token %}
+        
+        {% if messages %}
+          {% for message in messages %}
+            <div class="rounded-xl bg-{% if message.tags == 'error' %}red{% else %}green{% endif %}-50 border border-{% if message.tags == 'error' %}red{% else %}green{% endif %}-200 px-4 py-3 text-sm text-{% if message.tags == 'error' %}red{% else %}green{% endif %}-700">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
 
-        <div class="grid gap-2 sm:grid-cols-[160px,1fr,auto] sm:items-center">
-          <label for="otp" class="text-sm font-semibold text-gray-700 sm:col-span-1">Verification OTP</label>
-          <input id="otp" type="text" inputmode="numeric" maxlength="6" placeholder="Enter 6-digit code" class="sm:col-span-1 tracking-[0.6rem] text-center text-lg font-semibold text-gray-900 caret-transparent w-full rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3 focus:border-orange-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-orange-500" />
-          <button type="button" class="mt-2 w-full rounded-2xl border border-orange-500 px-5 py-3 text-sm font-semibold uppercase tracking-wide text-orange-500 transition hover:bg-orange-500 hover:text-white sm:mt-0 sm:w-auto">
-            Verify OTP
-          </button>
-        </div>
-
-        <div class="grid gap-6 md:grid-cols-2">
-          <div class="space-y-2">
-            <label for="password" class="text-sm font-semibold text-gray-700">Password</label>
-            <input id="password" type="password" placeholder="Create strong password" class="w-full rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm focus:border-orange-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-orange-500" />
-            <p class="text-xs text-gray-400">Use at least 8 characters with letters, numbers, and symbols.</p>
+        {% if step == 'email' %}
+          <div class="grid gap-2 sm:grid-cols-[160px,1fr,auto] sm:items-center">
+            <label for="id_email" class="text-sm font-semibold text-gray-700 sm:col-span-1">Email Address</label>
+            {{ form.email }}
+            <button type="submit" name="action" value="send_otp" class="mt-2 w-full rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:from-orange-600 hover:to-orange-700 sm:mt-0 sm:w-auto">
+              Send OTP
+            </button>
           </div>
-          <div class="space-y-2">
-            <label for="confirm-password" class="text-sm font-semibold text-gray-700">Confirm Password</label>
-            <input id="confirm-password" type="password" placeholder="Re-enter password" class="w-full rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm focus:border-orange-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-orange-500" />
-            <p class="text-xs text-gray-400">Both passwords must match to proceed.</p>
-          </div>
-        </div>
+          {% if form.email.errors %}
+            <div class="text-sm text-red-600">{{ form.email.errors }}</div>
+          {% endif %}
+          <p class="text-xs text-gray-500">
+            We'll send a one-time passcode to your email. Enter it below to verify your account ownership.
+          </p>
+        {% endif %}
 
-        <div class="space-y-4">
-          <label class="flex items-start gap-3 text-sm text-gray-600">
-            <input type="checkbox" class="mt-1 h-4 w-4 rounded border-gray-300 text-orange-500 focus:ring-0 focus:ring-offset-0" />
-            I agree to the <a href="#" class="text-orange-500 hover:text-orange-600">Terms &amp; Conditions</a> and <a href="#" class="text-orange-500 hover:text-orange-600">Privacy Policy</a>.
-          </label>
-          <button type="submit" class="w-full rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:from-orange-600 hover:to-orange-700">
-            Create Account
-          </button>
-        </div>
+        {% if step == 'otp' %}
+          <div class="grid gap-2 sm:grid-cols-[160px,1fr,auto] sm:items-center">
+            <label for="id_otp" class="text-sm font-semibold text-gray-700 sm:col-span-1">Verification OTP</label>
+            {{ form.otp }}
+            <button type="submit" name="action" value="verify_otp" class="mt-2 w-full rounded-2xl border border-orange-500 px-5 py-3 text-sm font-semibold uppercase tracking-wide text-orange-500 transition hover:bg-orange-500 hover:text-white sm:mt-0 sm:w-auto">
+              Verify OTP
+            </button>
+          </div>
+          {% if form.otp.errors %}
+            <div class="text-sm text-red-600">{{ form.otp.errors }}</div>
+          {% endif %}
+          <div class="text-center">
+            <form method="post" action="{% url 'send_otp' %}" class="inline">
+              {% csrf_token %}
+              <button type="submit" class="text-sm text-orange-500 hover:text-orange-600">Resend OTP</button>
+            </form>
+          </div>
+        {% endif %}
+
+        {% if step == 'password' %}
+          <div class="space-y-2">
+            <label for="id_email" class="text-sm font-semibold text-gray-700">Email Address</label>
+            {{ form.email }}
+          </div>
+          <div class="grid gap-6 md:grid-cols-2">
+            <div class="space-y-2">
+              <label for="id_password" class="text-sm font-semibold text-gray-700">Password</label>
+              {{ form.password }}
+              {% if form.password.errors %}
+                <div class="text-xs text-red-600">{{ form.password.errors }}</div>
+              {% else %}
+                <p class="text-xs text-gray-400">Use at least 8 characters with letters, numbers, and symbols.</p>
+              {% endif %}
+            </div>
+            <div class="space-y-2">
+              <label for="id_confirm_password" class="text-sm font-semibold text-gray-700">Confirm Password</label>
+              {{ form.confirm_password }}
+              {% if form.confirm_password.errors %}
+                <div class="text-xs text-red-600">{{ form.confirm_password.errors }}</div>
+              {% else %}
+                <p class="text-xs text-gray-400">Both passwords must match to proceed.</p>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <label class="flex items-start gap-3 text-sm text-gray-600">
+              {{ form.terms_accepted }}
+              I agree to the <a href="#" class="text-orange-500 hover:text-orange-600">Terms &amp; Conditions</a> and <a href="#" class="text-orange-500 hover:text-orange-600">Privacy Policy</a>.
+            </label>
+            {% if form.terms_accepted.errors %}
+              <div class="text-sm text-red-600">{{ form.terms_accepted.errors }}</div>
+            {% endif %}
+            <button type="submit" name="action" value="register" class="w-full rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:from-orange-600 hover:to-orange-700">
+              Create Account
+            </button>
+          </div>
+        {% endif %}
 
         <p class="text-center text-sm text-gray-500">
           Already have a BOOSTYUPME account?
