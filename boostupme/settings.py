@@ -40,7 +40,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'boostmeup.urls'
+ROOT_URLCONF = 'boostupme.urls'
 
 TEMPLATES = [
     {
@@ -57,7 +57,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'boostmeup.wsgi.application'
+WSGI_APPLICATION = 'boostupme.wsgi.application'
 
 
 # Database
