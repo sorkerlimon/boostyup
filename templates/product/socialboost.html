@@ -1,0 +1,276 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Social Boost Services - BOOSTYUPME{% endblock %}
+
+{% block content %}
+<main class="py-12">
+  <section class="mx-auto mb-10 w-full max-w-[1440px] px-6">
+    <div class="flex flex-wrap items-center gap-2 text-xs text-gray-500">
+      <a href="{% url 'home' %}" class="text-gray-400 hover:text-orange-500">BOOSTYUPME</a>
+      <span>/</span>
+      <a href="#" class="text-gray-400 hover:text-orange-500">Social Boost</a>
+    </div>
+  </section>
+
+  <section class="mx-auto w-full max-w-[1440px] px-6">
+    <div class="grid gap-8 lg:grid-cols-[260px,1fr]">
+      <aside class="space-y-6 rounded-3xl bg-white p-6 shadow-lg shadow-gray-900/10">
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-gray-500">Boost Channels</h2>
+        <ul class="space-y-4 text-sm text-gray-600">
+          <li class="flex items-center justify-between rounded-2xl px-4 py-3 transition hover:bg-orange-50">
+            <span class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 6.75v10.5a1.5 1.5 0 0 0 1.5 1.5h12a1.5 1.5 0 0 0 1.5-1.5V6.75A1.5 1.5 0 0 0 18 5.25H6A1.5 1.5 0 0 0 4.5 6.75Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9 4.5 3-4.5 3V9Z" />
+              </svg>
+              Short Videos
+            </span>
+            <span>156</span>
+          </li>
+          <li class="flex items-center justify-between rounded-2xl px-4 py-3 transition hover:bg-orange-50">
+            <span class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75v10.5m5.25-5.25H6.75" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 12a9.75 9.75 0 1 1-19.5 0 9.75 9.75 0 0 1 19.5 0Z" />
+              </svg>
+              Live Streaming
+            </span>
+            <span>98</span>
+          </li>
+          <li class="flex items-center justify-between rounded-2xl px-4 py-3 transition hover:bg-orange-50">
+            <span class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955a1.5 1.5 0 0 1 2.122 0L22.28 12l-8.954 8.955a1.5 1.5 0 0 1-2.122 0L2.25 12Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 2.25v19.5" />
+              </svg>
+              Creator Shoutouts
+            </span>
+            <span>72</span>
+          </li>
+          <li class="flex items-center justify-between rounded-2xl px-4 py-3 transition hover:bg-orange-50">
+            <span class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.7 2.35a1 1 0 0 1 1.6 0l1.11 1.6a1 1 0 0 0 .75.44l1.92.2a1 1 0 0 1 .57 1.74l-1.44 1.3a1 1 0 0 0-.32.95l.46 1.88a1 1 0 0 1-1.46 1.09L13.5 11.6a1 1 0 0 0-.94 0l-1.89.95a1 1 0 0 1-1.46-1.09l.46-1.88a1 1 0 0 0-.32-.95l-1.44-1.3a1 1 0 0 1 .57-1.74l1.92-.2a1 1 0 0 0 .75-.44Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75h15M8.25 19.5h7.5" />
+              </svg>
+              Brand Kits
+            </span>
+            <span>54</span>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="space-y-10">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <h1 class="text-2xl font-bold text-gray-900">Social Boost Marketplace</h1>
+            <p class="mt-2 max-w-2xl text-sm text-gray-500">
+              Accelerate your community with curated engagement packages crafted for creators, guilds, and esports teams.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 text-xs text-gray-500">
+            <span class="rounded-full bg-white px-3 py-1 shadow-sm">Verified Partners</span>
+            <span class="rounded-full bg-white px-3 py-1 shadow-sm">Instant Delivery</span>
+          </div>
+        </div>
+
+        <div class="space-y-8">
+          <div id="reels" class="space-y-4">
+            <h2 class="text-lg font-semibold text-gray-800">Reels &amp; Shorts Ads</h2>
+            <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+              <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+                <div class="relative h-[120px] w-full overflow-hidden">
+                  <img src="{% static 'images/mobilelegend.webp' %}" alt="Short Form Starter" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+                </div>
+                <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+                  <div>
+                    <p class="text-sm font-semibold text-gray-900">Short Form Starter</p>
+                    <p class="mt-1 text-[11px] text-gray-500">10k guaranteed reach</p>
+                  </div>
+                  <span class="text-[11px] font-medium text-orange-500">View Details</span>
+                </div>
+              </a>
+
+              <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+                <div class="relative h-[120px] w-full overflow-hidden">
+                  <img src="{% static 'images/game.webp' %}" alt="Creator Spotlight" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+                </div>
+                <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+                  <div>
+                    <p class="text-sm font-semibold text-gray-900">Creator Spotlight</p>
+                    <p class="mt-1 text-[11px] text-gray-500">Feature in 3 regions</p>
+                  </div>
+                  <span class="text-[11px] font-medium text-orange-500">View Details</span>
+                </div>
+              </a>
+
+              <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+                <div class="relative h-[120px] w-full overflow-hidden">
+                  <img src="{% static 'images/image3.webp' %}" alt="Guild Showcase" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+                </div>
+                <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+                  <div>
+                    <p class="text-sm font-semibold text-gray-900">Guild Showcase</p>
+                    <p class="mt-1 text-[11px] text-gray-500">Premium editing add-on</p>
+                  </div>
+                  <span class="text-[11px] font-medium text-orange-500">View Details</span>
+                </div>
+              </a>
+
+              <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+                <div class="relative h-[120px] w-full overflow-hidden">
+                  <img src="{% static 'images/efotbal.webp' %}" alt="Sponsor Trailer" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+                </div>
+                <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+                  <div>
+                    <p class="text-sm font-semibold text-gray-900">Sponsor Trailer</p>
+                    <p class="mt-1 text-[11px] text-gray-500">End screen CTA</p>
+                  </div>
+                  <span class="text-[11px] font-medium text-orange-500">View Details</span>
+                </div>
+              </a>
+
+              <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+                <div class="relative h-[120px] w-full overflow-hidden">
+                  <img src="{% static 'images/image.webp' %}" alt="Daily Boost" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+                </div>
+                <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+                  <div>
+                    <p class="text-sm font-semibold text-gray-900">Daily Boost</p>
+                    <p class="mt-1 text-[11px] text-gray-500">7-day rotation</p>
+                  </div>
+                  <span class="text-[11px] font-medium text-orange-500">View Details</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div id="live" class="space-y-4">
+            <h2 class="text-lg font-semibold text-gray-800">Live Stream Push</h2>
+            <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+              <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+                <div class="relative h-[120px] w-full overflow-hidden">
+                  <img src="{% static 'images/freefireproduct.webp' %}" alt="Launch Booster" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+                </div>
+                <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+                  <div>
+                    <p class="text-sm font-semibold text-gray-900">Launch Booster</p>
+                    <p class="mt-1 text-[11px] text-gray-500">Front-page highlight</p>
+                  </div>
+                  <span class="text-[11px] font-medium text-orange-500">View Details</span>
+                </div>
+              </a>
+
+              <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+                <div class="relative h-[120px] w-full overflow-hidden">
+                  <img src="{% static 'images/game.webp' %}" alt="Co-Stream Pairing" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+                </div>
+                <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+                  <div>
+                    <p class="text-sm font-semibold text-gray-900">Co-Stream Pairing</p>
+                    <p class="mt-1 text-[11px] text-gray-500">Match with partners</p>
+                  </div>
+                  <span class="text-[11px] font-medium text-orange-500">View Details</span>
+                </div>
+              </a>
+
+              <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+                <div class="relative h-[120px] w-full overflow-hidden">
+                  <img src="{% static 'images/mobilelegend.webp' %}" alt="Viewer Surge" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+                </div>
+                <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+                  <div>
+                    <p class="text-sm font-semibold text-gray-900">Viewer Surge</p>
+                    <p class="mt-1 text-[11px] text-gray-500">15k concurrent push</p>
+                  </div>
+                  <span class="text-[11px] font-medium text-orange-500">View Details</span>
+                </div>
+              </a>
+
+              <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+                <div class="relative h-[120px] w-full overflow-hidden">
+                  <img src="{% static 'images/image 2.webp' %}" alt="Tournament Spotlight" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+                </div>
+                <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+                  <div>
+                    <p class="text-sm font-semibold text-gray-900">Tournament Spotlight</p>
+                    <p class="mt-1 text-[11px] text-gray-500">Global carousel</p>
+                  </div>
+                  <span class="text-[11px] font-medium text-orange-500">View Details</span>
+                </div>
+              </a>
+
+              <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+                <div class="relative h-[120px] w-full overflow-hidden">
+                  <img src="{% static 'images/efotbal.webp' %}" alt="Sub Growth Plus" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+                </div>
+                <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+                  <div>
+                    <p class="text-sm font-semibold text-gray-900">Sub Growth Plus</p>
+                    <p class="mt-1 text-[11px] text-gray-500">Tiered reward boost</p>
+                  </div>
+                  <span class="text-[11px] font-medium text-orange-500">View Details</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  (() => {
+    const panel = document.getElementById("chat-panel");
+    if (!panel) return;
+    
+    const chatHeader = panel.querySelector(".bg-gradient-to-r");
+    if (chatHeader) {
+      const title = chatHeader.querySelector("p.text-sm.font-semibold");
+      if (title) {
+        title.textContent = "Chat with Boost Experts";
+      }
+      const subtitle = chatHeader.querySelector("p.text-xs");
+      if (subtitle) {
+        subtitle.textContent = "Get recommendations for your campaign";
+      }
+    }
+    
+    const initialMessage = panel.querySelector(".bg-orange-50");
+    if (initialMessage) {
+      initialMessage.textContent = "Tell us your platform and goals—we'll suggest the best boost pack.";
+    }
+    
+    const form = document.getElementById("chat-form");
+    const log = document.getElementById("chat-log");
+    
+    if (form && log) {
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const input = document.getElementById("chat-input");
+        const message = input?.value.trim();
+        if (!message) return;
+
+        const item = document.createElement("li");
+        item.className = "flex justify-end";
+        item.innerHTML = `<span class="max-w-[85%] rounded-2xl bg-orange-500 px-3 py-2 text-xs font-medium text-white">${message}</span>`;
+        log.appendChild(item);
+        log.scrollTo({ top: log.scrollHeight });
+        input.value = "";
+
+        setTimeout(() => {
+          const reply = document.createElement("li");
+          reply.className = "flex justify-start";
+          reply.innerHTML = `<span class="max-w-[85%] rounded-2xl bg-gray-100 px-3 py-2 text-xs text-gray-700">Awesome! Our boost consultant will reach you shortly.</span>`;
+          log.appendChild(reply);
+          log.scrollTo({ top: log.scrollHeight });
+        }, 1200);
+      });
+    }
+  })();
+</script>
+{% endblock %}

@@ -7,3 +7,7 @@ def home(request):
 
 def game(request):
     return render(request, "product/game.html")
+
+
+def socialboost(request):
+    return render(request, "product/socialboost.html")
