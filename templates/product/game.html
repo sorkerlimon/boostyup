@@ -1,0 +1,253 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Games Library - BOOSTYUPME{% endblock %}
+
+{% block content %}
+<main class="py-12">
+  <section class="mx-auto mb-10 w-full max-w-[1440px] px-6">
+    <div class="flex flex-wrap items-center gap-2 text-xs text-gray-500">
+      <a href="#" class="text-gray-400 hover:text-orange-500">BOOSTYUPME</a>
+      <span>/</span>
+      <a href="#" class="text-gray-400 hover:text-orange-500">Game</a>
+    </div>
+  </section>
+
+  <section class="mx-auto w-full max-w-[1440px] px-6">
+    <div class="grid gap-8 lg:grid-cols-[260px,1fr]">
+      <aside class="space-y-6 rounded-3xl bg-white p-6 shadow-lg shadow-gray-900/10">
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-gray-500">Platform</h2>
+        <ul class="space-y-4 text-sm text-gray-600">
+          <li class="flex items-center justify-between rounded-2xl px-4 py-3 transition hover:bg-orange-50">
+            <span class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 7.5h13.5m-13.5 0a2.25 2.25 0 0 0-2.25 2.25v7.5A2.25 2.25 0 0 0 5.25 19.5h13.5a2.25 2.25 0 0 0 2.25-2.25v-7.5a2.25 2.25 0 0 0-2.25-2.25m-13.5 0V5.25A2.25 2.25 0 0 1 7.5 3h9a2.25 2.25 0 0 1 2.25 2.25V7.5" />
+              </svg>
+              PC
+            </span>
+            <span>1434</span>
+          </li>
+          <li class="flex items-center justify-between rounded-2xl px-4 py-3 transition hover:bg-orange-50">
+            <span class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 6.75v10.5a1.5 1.5 0 0 0 1.5 1.5h12a1.5 1.5 0 0 0 1.5-1.5V6.75A1.5 1.5 0 0 0 18 5.25H6A1.5 1.5 0 0 0 4.5 6.75Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 19.5h7.5" />
+              </svg>
+              Webgame
+            </span>
+            <span>69</span>
+          </li>
+          <li class="flex items-center justify-between rounded-2xl px-4 py-3 transition hover:bg-orange-50">
+            <span class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 2.25h6a2.25 2.25 0 0 1 2.25 2.25v15.75l-5.25-2.25-5.25 2.25V4.5A2.25 2.25 0 0 1 9 2.25Z" />
+              </svg>
+              Mobile
+            </span>
+            <span>1720</span>
+          </li>
+          <li class="flex items-center justify-between rounded-2xl px-4 py-3 transition hover:bg-orange-50">
+            <span class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 4.5h10.5a2.25 2.25 0 0 1 2.25 2.25v10.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 17.25V6.75A2.25 2.25 0 0 1 6.75 4.5Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 7.5h-7.5M9 12h6m-3 4.5v-9" />
+              </svg>
+              Playstation
+            </span>
+            <span>700</span>
+          </li>
+          <li class="flex items-center justify-between rounded-2xl px-4 py-3 transition hover:bg-orange-50">
+            <span class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 4.5h15v15h-15z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 9l6 6m0-6-6 6" />
+              </svg>
+              Xbox
+            </span>
+            <span>586</span>
+          </li>
+          <li class="flex items-center justify-between rounded-2xl px-4 py-3 transition hover:bg-orange-50">
+            <span class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3h10.5A2.25 2.25 0 0 1 19.5 5.25v13.5A2.25 2.25 0 0 1 17.25 21H6.75A2.25 2.25 0 0 1 4.5 18.75V5.25A2.25 2.25 0 0 1 6.75 3Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 7.5v3.75a1.5 1.5 0 0 1-3 0V7.5" />
+              </svg>
+              Nintendo Switch
+            </span>
+            <span>453</span>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <h1 class="text-2xl font-bold text-gray-900">Game Catalogue</h1>
+          <div class="flex items-center gap-3 text-xs text-gray-500">
+            <span class="rounded-full bg-white px-3 py-1 shadow-sm">Global</span>
+            <span class="rounded-full bg-white px-3 py-1 shadow-sm">Top-up</span>
+            <span class="rounded-full bg-white px-3 py-1 shadow-sm">Featured</span>
+          </div>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+          <a href="product.html" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+            <div class="relative h-[120px] w-full overflow-hidden">
+              <img src="{% static 'images/freefireproduct.webp' %}" alt="Garena Free Fire" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+            </div>
+            <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+              <div>
+                <p class="text-sm font-semibold text-gray-900">Garena Free Fire</p>
+                <p class="mt-1 text-[11px] text-gray-500">English / Global</p>
+              </div>
+              <span class="text-[11px] font-medium text-orange-500">View Details</span>
+            </div>
+          </a>
+
+          <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+            <div class="relative h-[120px] w-full overflow-hidden">
+              <img src="{% static 'images/game.webp' %}" alt="PUBG Mobile" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+            </div>
+            <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+              <div>
+                <p class="text-sm font-semibold text-gray-900">PUBG Mobile</p>
+                <p class="mt-1 text-[11px] text-gray-500">English / Global</p>
+              </div>
+              <span class="text-[11px] font-medium text-orange-500">View Details</span>
+            </div>
+          </a>
+
+          <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+            <div class="relative h-[120px] w-full overflow-hidden">
+              <img src="{% static 'images/mobilelegend.webp' %}" alt="Clash of Clans" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+            </div>
+            <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+              <div>
+                <p class="text-sm font-semibold text-gray-900">Clash of Clans</p>
+                <p class="mt-1 text-[11px] text-gray-500">English / Global</p>
+              </div>
+              <span class="text-[11px] font-medium text-orange-500">View Details</span>
+            </div>
+          </a>
+
+          <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+            <div class="relative h-[120px] w-full overflow-hidden">
+              <img src="{% static 'images/efotbal.webp' %}" alt="GTA V" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+            </div>
+            <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+              <div>
+                <p class="text-sm font-semibold text-gray-900">GTA 5</p>
+                <p class="mt-1 text-[11px] text-gray-500">English / Global</p>
+              </div>
+              <span class="text-[11px] font-medium text-orange-500">View Details</span>
+            </div>
+          </a>
+
+          <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+            <div class="relative h-[120px] w-full overflow-hidden">
+              <img src="{% static 'images/image3.webp' %}" alt="Call of Duty Mobile" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+            </div>
+            <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+              <div>
+                <p class="text-sm font-semibold text-gray-900">Call of Duty</p>
+                <p class="mt-1 text-[11px] text-gray-500">English / Global</p>
+              </div>
+              <span class="text-[11px] font-medium text-orange-500">View Details</span>
+            </div>
+          </a>
+
+          <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+            <div class="relative h-[120px] w-full overflow-hidden">
+              <img src="{% static 'images/image 2.webp' %}" alt="Honkai Star Rail" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+            </div>
+            <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+              <div>
+                <p class="text-sm font-semibold text-gray-900">Honkai: Star Rail</p>
+                <p class="mt-1 text-[11px] text-gray-500">English / Global</p>
+              </div>
+              <span class="text-[11px] font-medium text-orange-500">View Details</span>
+            </div>
+          </a>
+
+          <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+            <div class="relative h-[120px] w-full overflow-hidden">
+              <img src="{% static 'images/mobilelegend.webp' %}" alt="Roblox" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+            </div>
+            <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+              <div>
+                <p class="text-sm font-semibold text-gray-900">Roblox</p>
+                <p class="mt-1 text-[11px] text-gray-500">English / Global</p>
+              </div>
+              <span class="text-[11px] font-medium text-orange-500">View Details</span>
+            </div>
+          </a>
+
+          <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+            <div class="relative h-[120px] w-full overflow-hidden">
+              <img src="{% static 'images/efotbal.webp' %}" alt="eFootball 2024" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+            </div>
+            <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+              <div>
+                <p class="text-sm font-semibold text-gray-900">eFootball™ 2024</p>
+                <p class="mt-1 text-[11px] text-gray-500">English / Global</p>
+              </div>
+              <span class="text-[11px] font-medium text-orange-500">View Details</span>
+            </div>
+          </a>
+
+          <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+            <div class="relative h-[120px] w-full overflow-hidden">
+              <img src="{% static 'images/image.webp' %}" alt="Genshin Impact" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+            </div>
+            <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+              <div>
+                <p class="text-sm font-semibold text-gray-900">Genshin Impact</p>
+                <p class="mt-1 text-[11px] text-gray-500">English / Global</p>
+              </div>
+              <span class="text-[11px] font-medium text-orange-500">View Details</span>
+            </div>
+          </a>
+
+          <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+            <div class="relative h-[120px] w-full overflow-hidden">
+              <img src="{% static 'images/game.webp' %}" alt="Last Z" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+            </div>
+            <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+              <div>
+                <p class="text-sm font-semibold text-gray-900">Last Z Shooter</p>
+                <p class="mt-1 text-[11px] text-gray-500">English / Global</p>
+              </div>
+              <span class="text-[11px] font-medium text-orange-500">View Details</span>
+            </div>
+          </a>
+
+          <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-2xl">
+            <div class="relative h-[120px] w-full overflow-hidden">
+              <img src="{% static 'images/image3.webp' %}" alt="BloodStrike" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+            </div>
+            <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+              <div>
+                <p class="text-sm font-semibold text-gray-900">BloodStrike</p>
+                <p class="mt-1 text-[11px] text-gray-500">English / Global</p>
+              </div>
+              <span class="text-[11px] font-medium text-orange-500">View Details</span>
+            </div>
+          </a>
+
+          <a href="#" class="group flex w-full max-w-[152px] flex-col overflow-hidden rounded-[28px] bg-white shadow-md shadow-gray-900/10 transition hover:-translate-y-1 hover:shadow-lg">
+            <div class="relative h-[120px] w-full overflow-hidden">
+              <img src="{% static 'images/mobilelegend.webp' %}" alt="TikTok Live" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+            </div>
+            <div class="flex h-[91px] flex-col justify-between px-4 py-3">
+              <div>
+                <p class="text-sm font-semibold text-gray-900">TikTok Live</p>
+                <p class="mt-1 text-[11px] text-gray-500">English / Global</p>
+              </div>
+              <span class="text-[11px] font-medium text-orange-500">View Details</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
+
