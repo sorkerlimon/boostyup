@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}Profile - BOOSTYUPME{% endblock %}
+
+{% block content %}
+<main class="py-16">
+  <section class="mx-auto w-full max-w-4xl px-6">
+    <!-- Header Section with Profile Picture -->
+    <div class="mb-8 flex items-center justify-between rounded-[32px] border border-white/60 bg-white/90 p-8 shadow-2xl shadow-gray-900/10 backdrop-blur">
+      <div class="flex items-center gap-6">
+        <div class="h-20 w-20 overflow-hidden rounded-full bg-gradient-to-br from-orange-400 to-pink-500">
+          <div class="flex h-full w-full items-center justify-center text-2xl font-bold text-white">AR</div>
+        </div>
+        <div>
+          <h1 class="text-2xl font-bold text-gray-900">Alexa Rawles</h1>
+          <p class="mt-1 text-sm text-gray-500">alexarawles@gmail.com</p>
+        </div>
+      </div>
+      <button class="rounded-xl bg-blue-500 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-600">
+        Edit
+      </button>
+    </div>
+
+    <!-- Personal Information Section -->
+    <div class="mb-6 rounded-[32px] border border-white/60 bg-white/90 p-8 shadow-2xl shadow-gray-900/10 backdrop-blur">
+      <h2 class="mb-6 text-xl font-semibold text-gray-900">Personal Information</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <!-- Left Column -->
+        <div class="space-y-2">
+          <label for="full-name" class="text-sm font-semibold text-gray-700">Full Name</label>
+          <input id="full-name" type="text" placeholder="Your First Name" class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm focus:border-orange-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-orange-500" />
+        </div>
+        <div class="space-y-2">
+          <label for="nick-name" class="text-sm font-semibold text-gray-700">Nick Name</label>
+          <input id="nick-name" type="text" placeholder="Your First Name" class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm focus:border-orange-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-orange-500" />
+        </div>
+        <div class="space-y-2">
+          <label for="gender" class="text-sm font-semibold text-gray-700">Gender</label>
+          <div class="relative">
+            <select id="gender" class="w-full appearance-none rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm focus:border-orange-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-orange-500">
+              <option value="">Your First Name</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+            <svg class="pointer-events-none absolute right-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <label for="country" class="text-sm font-semibold text-gray-700">Country</label>
+          <div class="relative">
+            <select id="country" class="w-full appearance-none rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm focus:border-orange-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-orange-500">
+              <option value="">Your First Name</option>
+              <option value="us">United States</option>
+              <option value="uk">United Kingdom</option>
+              <option value="ca">Canada</option>
+            </select>
+            <svg class="pointer-events-none absolute right-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <label for="language" class="text-sm font-semibold text-gray-700">Language</label>
+          <div class="relative">
+            <select id="language" class="w-full appearance-none rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm focus:border-orange-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-orange-500">
+              <option value="">Your First Name</option>
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
+              <option value="fr">French</option>
+            </select>
+            <svg class="pointer-events-none absolute right-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <label for="timezone" class="text-sm font-semibold text-gray-700">Time Zone</label>
+          <div class="relative">
+            <select id="timezone" class="w-full appearance-none rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm focus:border-orange-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-orange-500">
+              <option value="">Your First Name</option>
+              <option value="utc">UTC</option>
+              <option value="est">EST</option>
+              <option value="pst">PST</option>
+            </select>
+            <svg class="pointer-events-none absolute right-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- My Email Address Section -->
+    <div class="rounded-[32px] border border-white/60 bg-white/90 p-8 shadow-2xl shadow-gray-900/10 backdrop-blur">
+      <h2 class="mb-6 text-xl font-semibold text-gray-900">My Email Address</h2>
+      <div class="space-y-4">
+        <div class="flex items-center justify-between rounded-xl border border-gray-200 bg-gray-50 p-4">
+          <div class="flex items-center gap-3">
+            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100">
+              <svg class="h-4 w-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-gray-900">alexarawles@gmail.com</p>
+              <p class="text-xs text-gray-500">1 month ago</p>
+            </div>
+          </div>
+        </div>
+        <button class="flex w-full items-center justify-center gap-2 rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 text-sm font-semibold text-blue-600 transition hover:bg-blue-100">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+          </svg>
+          Add Email Address
+        </button>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

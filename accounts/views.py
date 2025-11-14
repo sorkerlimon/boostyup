@@ -5,3 +5,6 @@ def login_view(request):
 
 def register_view(request):
     return render(request, 'authentication/register.html')
+
+def profile_view(request):
+    return render(request, 'authentication/profile.html')
